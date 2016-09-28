@@ -1,0 +1,17 @@
+services:
+    forever_start:
+        class: "Command/StartCommand"
+        arguments:
+            - "%forever.console_path%"
+        tags:
+            - { name: "solfege.console.command" }
+
+    forever_stop:
+        class: "Command/StopCommand"
+        tags:
+            - { name: "solfege.console.command" }
+
+    forever_list:
+        class: "Command/ListCommand"
+        tags:
+            - { name: "solfege.console.command" }
