@@ -10,7 +10,7 @@ application.addBundle(new ForeverBundle);
 application.addBundle(new MyBundle);
 
 // Load configuration
-application.loadConfiguration(`${__dirname}/config/production.yml`);
+application.loadConfigurationFile(`${__dirname}/config/production.yml`, "yaml");
 
 // Start application
 application.start(process.argv.slice(2));

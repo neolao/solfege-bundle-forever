@@ -10,7 +10,11 @@ application.addBundle(new ForeverBundle);
 application.addBundle(new MyBundle);
 
 // Load configuration
-application.loadConfiguration(`${__dirname}/config/production.yml`);
+application.loadConfiguration({
+    forever: {
+        console_path: `${__dirname}/console.js`
+    }
+});
 
 // Start application
 let parameters = process.argv.slice(2);
